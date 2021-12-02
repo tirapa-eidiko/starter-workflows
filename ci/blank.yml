@@ -24,6 +24,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: Run a multi-line script
+        run: ls
+      
+      - uses: actions/checkout@v2
+        with: 
+          repository: CAT_A_01/RBS_AccountBalanceDetails_v1
+          path: RBS_AccountBalanceDetails_v1
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
